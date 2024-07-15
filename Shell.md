@@ -2,13 +2,13 @@
 
 > *Linux操作系统核心和外部应用程序的一个接口。是一个命令行解释器，接收应用程序/用户命令，然后调用操作系统内核。*
 
-# 一、入门
+## 一、入门
 
-## 1、脚本格式
+### 1、脚本格式
 
 脚本以**#! /bin/bash**开头（指定解析器）
 
-## 2、第一个Shell脚本
+### 2、第一个Shell脚本
 
 1. 需求：创建一个Shell脚本，输出helloworld
 
@@ -47,9 +47,9 @@
       - 前两种方式都是在当前Shell中打开一个子Shell来执行脚本内容，当脚本内容结束，则子Shell关闭，会到父Shell中。
       - 第三种，可以使脚本内容在当前Shell里执行，而无需打开子Shell，这也就是为什么我们每次修改完/etc/profile文件以后，需要source一下的原因。
 
-## 3、变量
+### 3、变量
 
-### 3.1、系统定义变量
+#### 3.1、系统定义变量
 
 1. 常用系统变量
 
@@ -61,7 +61,7 @@ $HOME、$PWD、$USER
    2. 显示当前Shell中所有变量
       1. ![img](https://vnkshn64w3.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjgwODZlODNiNGRlZWY0Njg3NDUyNDU2NzBjODZjM2VfT2tqSWdneDhIWXdpWU5NbEpzQjRhWFFCRVhSNWFoM3hfVG9rZW46RHhxd2JRRk5Gb0hQVHJ4M0hIOGNNZUFRbkVmXzE3MDI5MjA0NTc6MTcwMjkyNDA1N19WNA)
 
-### 3.2、自定义变量
+#### 3.2、自定义变量
 
 1. 基本语法
    1. 定义变量：变量名=变量值，注意，=号前后不能有空格
@@ -74,7 +74,7 @@ $HOME、$PWD、$USER
    4. 变量的值如果有空格，需要使用双引号或单引号括起来。
 3. 实操...
 
-### 3.3、特殊变量
+#### 3.3、特殊变量
 
 1. $n
    1.  n为数字，$0代表该脚本名称，$1-$9代表第一到第九个参数，10以上的参数，需要用大括号包含，如${10}。
@@ -111,7 +111,7 @@ echo $@
       1. 最后一次执行的命令的返回状态，如果这个变量的值为0，证明上一个命令正确执行；如果这个变量的值为非0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。
    2. 案例...
 
-## 4、运算符
+### 4、运算符
 
 1. 基本语法
 
@@ -133,7 +133,7 @@ echo $@
 
          2. ![img](https://vnkshn64w3.feishu.cn/space/api/box/stream/download/asynccode/?code=N2FjZDMyYmU1MzQ3NjdjOWUyMWU1NzU4YTM4ZTU0MjRfQldrM2M2elRsQmx5WnBCdTVVbFQ0bHE0RmUwSGZlT21fVG9rZW46UjJOdmJNTFVXb09PanZ4c2ZYaWNpZkxGbnFiXzE3MDI5MjA0NTc6MTcwMjkyNDA1N19WNA)
 
-## 5、条件判断
+### 5、条件判断
 
 1. 基本语法
    1.  test [condition]
@@ -157,9 +157,9 @@ echo $@
       3. -d 文件存在并且是一个目录
 3. 案例...
 
-## 6、流程控制
+### 6、流程控制
 
-### 6.1、if判断
+#### 6.1、if判断
 
 1. 基本语法
 
@@ -190,7 +190,7 @@ echo $@
          fi
          ```
 
-### 6.2、case语句
+#### 6.2、case语句
 
 1. 基本语法
 
@@ -217,7 +217,7 @@ echo $@
 
 1. 案例
 
-### 6.3、for循环
+#### 6.3、for循环
 
 1. 基本语法1
 
@@ -258,7 +258,7 @@ echo $@
 
    1. ![img](https://vnkshn64w3.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg0NjUwYWIyZjgyYmY5Yjk5ZjIwNzFiMjNmMDE4MGFfVW81ZXFIa2diUGRqMkZ4bkZveTVyMzJtSkoyeTFFbG5fVG9rZW46WHBQOWJZem5ub2hkWnV4Q2VUbWNtWHJsbnlnXzE3MDI5MjA0NTc6MTcwMjkyNDA1N19WNA)
 
-### 6.4、while循环
+#### 6.4、while循环
 
 1. 基本语法
 
@@ -283,7 +283,7 @@ echo $@
       echo $sum
       ```
 
-## 7、read读取控制台输入
+### 7、read读取控制台输入
 
 1. 基本语法
    1. read (选项) (参数)
@@ -293,11 +293,11 @@ echo $@
       2. 参数
          1.    变量：指定读取值的变量名
 
-## 8、函数
+### 8、函数
 
-### 8.1、系统函数
+#### 8.1、系统函数
 
-#### 8.1.1、basename
+##### 8.1.1、basename
 
 1. 基本语法
 
@@ -310,7 +310,7 @@ echo $@
 1. 案例
    1. ![img](https://vnkshn64w3.feishu.cn/space/api/box/stream/download/asynccode/?code=ODZmZWEyM2U2NTBhNmQzZDRjYjU1MGY4MDU1MDAzN2NfNXhwSERpdzhpTUIxSU1KVUhRcVFrOWJIY09xWkROeTBfVG9rZW46TG16YmJDMXpsbzNoVlV4REtNc2N1YjBlbnliXzE3MDI5MjA0NTc6MTcwMjkyNDA1N19WNA)
 
-#### 8.1.2、dirname
+##### 8.1.2、dirname
 
 1. 基本语法
 
@@ -326,7 +326,7 @@ Dirname 可以理解为取文件路径的绝对路径名称。
    1.  获取qint.txt文件的路径
    2. ![img](https://vnkshn64w3.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDBkMjc1MWY5YjI5MWMyNDUzM2Y4M2ZjYWNkMjlkZGFfTjBUY0xieXpjWElzSWlsTkVUVTF6c2tVcVBKUzVyTkJfVG9rZW46Qm95N2JHaUs0b0RNOUt4dXFnU2N6WVpybmViXzE3MDI5MjA0NTc6MTcwMjkyNDA1N19WNA)
 
-### 8.2、自定义函数
+#### 8.2、自定义函数
 
 1. 基本语法
 
@@ -345,11 +345,11 @@ Dirname 可以理解为取文件路径的绝对路径名称。
 
 3. 案例
 
-## 9、正则表达式
+### 9、正则表达式
 
 使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。
 
-### 9.1、常规匹配
+#### 9.1、常规匹配
 
 一串不包含特殊字符的正则表达式匹配它自己，
 
@@ -357,7 +357,7 @@ Dirname 可以理解为取文件路径的绝对路径名称。
 
 就会匹配所有包含root的行。
 
-### 9.2、常用特殊字符
+#### 9.2、常用特殊字符
 
 1. 特殊字符：^
    1.  ^ 匹配一行的开头，
@@ -399,9 +399,9 @@ $ 匹配一行的结束，
 
 \表示转义，并不会单独使用，由于所有特殊字符都有其特定匹配模式，当我们想匹配某一特殊字符本身时，就会碰到困难。此时我们就要将转义字符和特殊字符连用，来表示特殊字符本身。
 
-## 10、文本处理工具
+### 10、文本处理工具
 
-### 10.1、cut
+#### 10.1、cut
 
 在文件中负责剪切数据用的，cut命令从文件的每一行剪切字节、字符和字段并将这些字节、字符、字段输出。
 
@@ -419,7 +419,7 @@ $ 匹配一行的结束，
 
 3. 案例
 
-### 10.2、awk
+#### 10.2、awk
 
 把文件逐行读入，以空格为默认分隔符将每行切片，切开的部分再进行分析处理。
 
