@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="860" height="280" rx="12" fill="#fafafa"/>
+  <rect width="860" height="280" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">Vim 三种模式</text>
+
+  <rect x="40" y="70" width="240" height="140" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="160" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Normal</text>
+  <text x="160" y="140" text-anchor="middle" font-size="12" fill="#0d47a1">hjkl 移动、dd 删行</text>
+  <text x="160" y="164" text-anchor="middle" font-size="12" fill="#0d47a1">启动就在这里</text>
+
+  <rect x="310" y="70" width="240" height="140" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="430" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#e65100">Insert</text>
+  <text x="430" y="140" text-anchor="middle" font-size="12" fill="#bf360c">i a o I A O 进入</text>
+  <text x="430" y="164" text-anchor="middle" font-size="12" fill="#bf360c">Esc 回 Normal</text>
+
+  <rect x="580" y="70" width="240" height="140" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="700" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Command-line</text>
+  <text x="700" y="140" text-anchor="middle" font-size="12" fill="#1b5e20">:w :q :wq :%s</text>
+  <text x="700" y="164" text-anchor="middle" font-size="12" fill="#1b5e20">/pattern 搜索</text>
+  <text x="430" y="240" text-anchor="middle" font-size="13" fill="#37474f">卡住了先 Esc Esc，再 :q! 放弃修改离开</text>
+  <text x="430" y="264" text-anchor="middle" font-size="12" fill="#78909c">. 重复上次修改；u 撤销；Ctrl-r 重做。Visual 是第四种（v / V / Ctrl-v）</text>
+
+</svg>

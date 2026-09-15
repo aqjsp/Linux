@@ -1,5 +1,15 @@
 # 常用的Linux命令
 
+排障时不要从 `ls` 一路背到 `useradd`。先按「进程 / 内存 / 磁盘 / 网络」四块定位，再用下面的命令把细节挖出来。
+
+![ps / free / df / ss：看现场的四块](./image/proc-memory.svg)
+
+权限位和硬链接/软链接是面试高频，单独看这两张：
+
+![rwx 与 755](./image/perm-bits.svg)
+
+![inode：硬链接共享 inode，软链接存路径](./image/inode-link.svg)
+
 ## 1、ls
 
 `ls`（list）是一个用于列出目录内容的常见的Linux/Unix命令。它用于查看目录中包含的文件和子目录，以及它们的属性。
@@ -185,8 +195,11 @@ scp source_file username@hostname_or_ip:destination
 
 ## 18、chmod修改文件权限
 
-```Bash
-chmod permissions file_name
+`chmod` 改的是权限位。`r=4, w=2, x=1`，三组分别是所有者、所属组、其他人。`chmod 755 file` 就是 `rwxr-xr-x`。目录的 `x` 表示「能否进入该目录」：没有执行位就不能 `cd`，即使有读权限也列不全路径下的内容。
+
+```bash
+chmod 755 file_name
+chmod u=rwx,go=rx file_name
 ```
 
 ## 19、chown修改文件所有者
@@ -244,10 +257,27 @@ git clone repository_url
 lsof -i
 ```
 
-## 28、netstat显示网络连接、路由、接口等信息
+## 28、ss / netstat 看连接和监听
 
-```Plaintext
+`netstat` 在不少发行版已经不默认安装。优先用 `ss`：
+
+```bash
+ss -lntp          # 监听的 TCP 端口和进程
+ss -antp          # 当前连接
+ss -s             # 汇总
+```
+
+还在用 netstat 的机器：
+
+```bash
 netstat -tuln
+```
+
+网络接口不要再记 `ifconfig`（`net-tools` 包，很多镜像不带）。看地址和路由用：
+
+```bash
+ip addr
+ip route
 ```
 
 ## 29、ssh-keygen生成SSH密钥
@@ -270,13 +300,25 @@ passwd username
 
 ## 32、ln创建链接（硬链接或符号链接）
 
-```Bash
-ln source_file link_name
+硬链接：`ln a.txt b.txt`，两个目录项指向同一个 inode，删一个只是 `nlink-1`，到 0 才释放数据。软链接：`ln -s a.txt c.txt`，新 inode 里存的是路径字符串，目标不存在就是悬空。
+
+```bash
+ln source_file link_name      # 硬链接
+ln -s source_file link_name   # 软链接
 ```
 
-## 33、service启动、停止或重启系统服务
+## 33、systemctl / service 管服务
 
-```Bash
+SysV 的 `service` 在 systemd 机器上是一层包装。直接用：
+
+```bash
+systemctl start|stop|restart|status nginx
+systemctl enable nginx     # 开机启动
+```
+
+老机器才写：
+
+```bash
 service service_name start|stop|restart
 ```
 

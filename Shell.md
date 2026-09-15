@@ -1,6 +1,10 @@
-# Shell？
+# Shell
 
-> *Linux操作系统核心和外部应用程序的一个接口。是一个命令行解释器，接收应用程序/用户命令，然后调用操作系统内核。*
+> Linux 内核和用户之间的命令行接口：读你的命令，调用内核去干活。常见实现是 bash、zsh、dash。脚本第一行 `#!/bin/bash` 是 shebang，告诉内核用哪个解释器。
+
+三种执行方式差在「开不开子 Shell」：`bash script.sh` 和 `./script.sh` 都在子进程里跑，`export` / `cd` 出不来；`source script.sh`（或 `. script.sh`）在当前 Shell 执行，改环境会留下。
+
+![bash / ./ / source：子 Shell vs 当前 Shell](./image/shell-exec.svg)
 
 ## 一、入门
 
@@ -102,7 +106,7 @@ $HOME、$PWD、$USER
    2. [ condition ]  **前后都有空格**
 2. 常用判断条件
    1. 两个整数之间比较
-      1. -ep等于（equal）
+      1. -eq 等于（equal），不是 -ep
       2. -ne不等于（not equal）
       3. -lt小于（less than）
       4. -le小于等于（less equal）

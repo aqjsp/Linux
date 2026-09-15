@@ -1,6 +1,8 @@
 # vi快捷键
 
-在 `vi` 或者更现代的改进版 `vim` 中，掌握一些基本的快捷键可以极大地提高编辑效率。以下是一些常用的快捷键及其功能说明：
+在 `vi` 或者更现代的改进版 `vim` 中，掌握一些基本的快捷键可以极大地提高编辑效率。先记住三（加一）种模式：Normal 里移动和删、Insert 里打字、Command-line 里存盘退出，Visual 是选区。卡住了连按两下 Esc，再 `:q!`。
+
+![Vim：Normal / Insert / Command-line](./image/vi-modes.svg)
 
 ### 基本模式切换
 

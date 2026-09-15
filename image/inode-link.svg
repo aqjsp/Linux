@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="880" height="300" rx="12" fill="#fafafa"/>
+  <rect width="880" height="300" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">inode：硬链接共享 inode，软链接是另一份路径</text>
+
+  <rect x="40" y="70" width="200" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0"/><text x="140" y="104" text-anchor="middle" font-size="13" fill="#0d47a1">目录项 a.txt</text><text x="140" y="128" text-anchor="middle" font-size="11" fill="#1565c0">名字 → inode 42</text>
+  <rect x="40" y="170" width="200" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0"/><text x="140" y="204" text-anchor="middle" font-size="13" fill="#0d47a1">目录项 b.txt</text><text x="140" y="228" text-anchor="middle" font-size="11" fill="#1565c0">名字 → inode 42</text>
+  <rect x="320" y="110" width="220" height="100" rx="8" fill="#fff3e0" stroke="#e65100"/>
+  <text x="430" y="144" text-anchor="middle" font-size="13" fill="#e65100">inode 42</text>
+  <text x="430" y="168" text-anchor="middle" font-size="12" fill="#bf360c">nlink=2　权限　时间</text>
+  <text x="430" y="190" text-anchor="middle" font-size="12" fill="#bf360c">数据块指针</text>
+  <rect x="620" y="110" width="220" height="100" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="730" y="144" text-anchor="middle" font-size="13" fill="#2e7d32">数据块</text>
+  <text x="730" y="176" text-anchor="middle" font-size="12" fill="#1b5e20">真正的文件内容</text>
+  <line x1="240" y1="110" x2="320" y2="150" stroke="#1565c0" stroke-width="2"/>
+  <line x1="240" y1="210" x2="320" y2="170" stroke="#1565c0" stroke-width="2"/>
+  <line x1="540" y1="160" x2="620" y2="160" stroke="#2e7d32" stroke-width="2"/>
+  <text x="440" y="250" text-anchor="middle" font-size="12" fill="#37474f">ln a.txt b.txt 硬链接；ln -s a.txt c.txt 软链接（新 inode，内容是路径字符串）</text>
+  <text x="440" y="276" text-anchor="middle" font-size="11" fill="#78909c">删掉其中一个硬链接，nlink-1，到 0 才释放数据。软链接目标不存在就是悬空</text>
+
+</svg>

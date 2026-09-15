@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="880" height="280" rx="12" fill="#fafafa"/>
+  <rect width="880" height="280" rx="12" fill="none" stroke="#e0e0e0"/>
+  <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a2e">权限位：rwxrwxrwx 与数字 0755</text>
+
+  <rect x="40" y="70" width="260" height="140" rx="10" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="170" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">user 所有者</text>
+  <text x="170" y="136" text-anchor="middle" font-size="18" font-family="ui-monospace, monospace" fill="#0d47a1">r w x</text>
+  <text x="170" y="168" text-anchor="middle" font-size="13" fill="#1565c0">4 + 2 + 1 = 7</text>
+
+  <rect x="310" y="70" width="260" height="140" rx="10" fill="#fff3e0" stroke="#e65100"/>
+  <text x="440" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">group 所属组</text>
+  <text x="440" y="136" text-anchor="middle" font-size="18" font-family="ui-monospace, monospace" fill="#bf360c">r - x</text>
+  <text x="440" y="168" text-anchor="middle" font-size="13" fill="#e65100">4 + 0 + 1 = 5</text>
+
+  <rect x="580" y="70" width="260" height="140" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="710" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">other 其他人</text>
+  <text x="710" y="136" text-anchor="middle" font-size="18" font-family="ui-monospace, monospace" fill="#1b5e20">r - x</text>
+  <text x="710" y="168" text-anchor="middle" font-size="13" fill="#2e7d32">4 + 0 + 1 = 5</text>
+  <text x="440" y="240" text-anchor="middle" font-size="13" fill="#37474f">chmod 755 file　≡　chmod u=rwx,go=rx file</text>
+  <text x="440" y="264" text-anchor="middle" font-size="12" fill="#78909c">目录的 x 是「能否进入」；没有 x 就不能 cd，即使有 r 也列不全路径</text>
+
+</svg>
