@@ -93,7 +93,7 @@ $HOME、$PWD、$USER
 
    写一个两数相加
 
-   ```shell
+   ```bash
    #!/bin/bash
    sum=$[$1+$2]
    echo sum=$sum
@@ -131,7 +131,7 @@ $HOME、$PWD、$USER
 
    1. 单分支
 
-      1. ```Shell
+      1. ```bash
          if [ 条件判断式 ]; then
             程序
          fi
@@ -144,7 +144,7 @@ $HOME、$PWD、$USER
 
    2. 多分支
 
-      1. ```Shell
+      1. ```bash
          if [ 条件判断式 ]
          then
             程序
@@ -160,7 +160,7 @@ $HOME、$PWD、$USER
 
 1. 基本语法
 
-   1. ```Shell
+   1. ```bash
       case $变量名 in
       "值1")
           如果变量的值等于值1，则执行程序1
@@ -187,7 +187,7 @@ $HOME、$PWD、$USER
 
 1. 基本语法1
 
-   1. ```Shell
+   1. ```bash
       for (( 初始值；循环控制条件；变量变化))
       do
           程序
@@ -196,7 +196,7 @@ $HOME、$PWD、$USER
 
 2. 案例
 
-   1. ```Shell
+   1. ```bash
       #!/bin/bash
       
       sum=0
@@ -209,7 +209,7 @@ $HOME、$PWD、$USER
 
 1. 基本语法2
 
-   ```shell
+   ```bash
    for 变量 in 值1 值2 值3...
    do
        程序
@@ -222,7 +222,7 @@ $HOME、$PWD、$USER
 
 1. 基本语法
 
-   1. ```Shell
+   1. ```bash
       while [ 条件判断式 ]
       do
           程序
@@ -231,7 +231,7 @@ $HOME、$PWD、$USER
 
 2. 案例
 
-   1. ```Shell
+   1. ```bash
       a=1
       while [ $a -le $1 ]
       do
@@ -261,7 +261,7 @@ $HOME、$PWD、$USER
 
 基本语法
 
-```shell
+```bash
 basename[string/pathname][suffix] 
 ```
 
@@ -271,7 +271,7 @@ basename[string/pathname][suffix]
 
 基本语法
 
-```shell
+```bash
 dirname 文件绝对路径
 ```
 
@@ -287,7 +287,7 @@ Dirname 可以理解为取文件路径的绝对路径名称。
 
 基本语法
 
-```shell
+```bash
 [ function ] funname[()]
 {
     Action;
@@ -353,7 +353,7 @@ $ 匹配一行的结束，
 
 1. 基本用法
 
-   1. ```Shell
+   1. ```bash
       cut [选项参数] filename
       ```
 
@@ -371,7 +371,7 @@ $ 匹配一行的结束，
 
 1. 基本用法
 
-   1. ```Shell
+   1. ```bash
       awk [选项参数] '/pattern1{action1} /pattern2/{action2}...' filename
       pattern  表示awk在数据中查找的内容，就是匹配模式
       action   在找到匹配内容时所执行的一系列命令

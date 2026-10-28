@@ -16,92 +16,92 @@
 
 基本语法：
 
-```Bash
+```bash
 ls
 ls -l (详细列表)
 ```
 
 - `-l`：以长格式（详细信息）列出文件和目录。
 
-```C++
+```cpp
 ls -l
 ```
 
 - `-a`：显示所有文件，包括隐藏文件（以`.`开头的文件和目录）。
 
-```C++
+```cpp
 ls -a
 ```
 
 - `-h`：以人类可读的方式显示文件大小。
 
-```C++
+```cpp
 ls -h
 ```
 
 - `-t`：按修改时间排序文件和目录。
 
-```C++
+```cpp
 ls -t
 ```
 
 - `-r`：以相反的顺序列出文件和目录。
 
-```C++
+```cpp
 ls -r
 ```
 
 - `-R`：递归列出子目录的内容。
 
-```C++
+```cpp
 ls -R
 ```
 
 - `-S`：按文件大小排序。
 
-```C++
+```cpp
 ls -S
 ```
 
 - `--color`：启用彩色输出，以区分不同类型的文件。
 
-```C++
+```cpp
 ls --color
 ```
 
 - `-i`：显示文件的inode号。
 
-```C++
+```cpp
 ls -i
 ```
 
 - `-d`：仅显示目录本身，而不显示其内容。
 
-```C++
+```cpp
 ls -d
 ```
 
 ## 2、cd切换目录
 
-```Bash
+```bash
 cd directory_path
 ```
 
 ## 3、pwd显示当前工作目录
 
-```Bash
+```bash
 pwd
 ```
 
 ## 4、touch创建空文件
 
-```Bash
+```bash
 touch filename
 ```
 
 ## 5、mkdir创建新目录
 
-```Plain
+```text
 mkdir directory_name
 ```
 
@@ -109,7 +109,7 @@ mkdir directory_name
 
 **rm** (remove)，是一个基本的 UNIX 命令，在 Linux 系统中是一个非常重要的命令，用于删除文件或目录。同时这也是一个应谨慎使用的命令，错误的使用此命令可能会删除重要的文件和数据。要使用 rm 删除文件，用户不需要具有读取/写入权限，但是必须有该文件上级目录的写入权限。在 Linux 中删除文件或目录不像 Windows 那样简单，因为一旦删除文件，它不会进入回收站而是完全删除，之后要想恢复非常困难的。
 
-```Bash
+```bash
 rm file_name
 rm -r directory_name (递归删除目录)
 ```
@@ -129,67 +129,67 @@ rm -r directory_name (递归删除目录)
 
 ## 7、cp复制文件或目录
 
-```Bash
+```bash
 cp source_file destination
 ```
 
 ## 8、mv移动或重命名文件
 
-```Bash
+```bash
 mv old_name new_name
 ```
 
 ## 9、cat查看文件内容
 
-```Bash
+```bash
 cat file_name
 ```
 
 ## 10、grep在文件中搜索文本
 
-```Perl
+```bash
 grep pattern file_name
 ```
 
 ## 11、ps显示运行中的进程
 
-```Java
+```java
 ps aux (显示所有进程)
 ```
 
 ## 12、kill终止进程
 
-```Bash
+```bash
 kill process_id
 ```
 
 ## 13、top查看系统资源使用情况
 
-```CSS
+```bash
 top
 ```
 
 ## 14、ifconfig查看和配置网络接口
 
-```Plaintext
+```text
 ifconfig
 ```
 
 ## 15、ping测试网络连接
 
-```Plaintext
+```text
 ping host_or_ip
 ```
 
 ## 16、ssh远程登录到其他机器
 
-```CSS
+```bash
 ssh username@hostname_or_ip
 ```
 
 ## 17、scp安全复制文件到远程主机
 
-```Ruby
+```bash
 scp source_file username@hostname_or_ip:destination
 ```
 
@@ -204,56 +204,56 @@ chmod u=rwx,go=rx file_name
 
 ## 19、chown修改文件所有者
 
-```Bash
+```bash
 chown new_owner file_name
 ```
 
 ## 20、tar压缩和解压文件
 
-```Plaintext
+```text
 tar -cvzf archive_name.tar.gz directory_to_compress
 tar -xvzf archive_name.tar.gz
 ```
 
 ## 21、df显示磁盘使用情况
 
-```Bash
+```bash
 df
 ```
 
 ## 22、du显示目录占用的磁盘空间
 
-```Bash
+```bash
 du -h directory_name
 ```
 
 ## 23、find在文件系统中搜索文件
 
-```Lua
+```lua
 find /path/to/search -name filename
 ```
 
 ## 24、wget下载文件
 
-```Plain
+```text
 wget URL
 ```
 
 ## 25、curl使用URL执行操作
 
-```Plain
+```text
 curl URL
 ```
 
 ## 26、git版本控制工具
 
-```Bash
+```bash
 git clone repository_url
 ```
 
 ## 27、lsof列出打开的文件和套接字
 
-```CSS
+```bash
 lsof -i
 ```
 
@@ -282,19 +282,19 @@ ip route
 
 ## 29、ssh-keygen生成SSH密钥
 
-```Plaintext
+```text
 ssh-keygen
 ```
 
 ## 30、useradd创建新用户
 
-```Plaintext
+```text
 useradd username
 ```
 
 ## 31、passwd更改用户密码
 
-```Plaintext
+```text
 passwd username
 ```
 
@@ -324,6 +324,6 @@ service service_name start|stop|restart
 
 ## 34、free显示内存使用情况
 
-```Bash
+```bash
 free
 ```
